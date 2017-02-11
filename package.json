@@ -4,7 +4,10 @@
   "description": "uws dwf",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build-html",
+    "build-html": "rm public/index.html & cp src/index.html public/",
+    "start": "npm build & http-server",
+    "test": "standard"
   },
   "author": "Emily Reese <emilyreese@fastmail.com>",
   "license": "ISC",
