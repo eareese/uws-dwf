@@ -1,0 +1,15 @@
+{
+  "name": "uws-dwf",
+  "version": "0.0.0",
+  "description": "uws dwf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emily Reese <emilyreese@fastmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
