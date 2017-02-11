@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run build-html",
     "build-html": "cp src/index.html public/",
-    "start": "npm build && http-server",
+    "clean-all": "rm -rf public && mkdir public",
+    "start": "npm run clean-all && npm run build && http-server",
     "test": "standard"
   },
   "author": "Emily Reese <emilyreese@fastmail.com>",
