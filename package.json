@@ -4,9 +4,11 @@
   "description": "uws dwf",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-html",
+    "build": "npm run build-html && npm run build-css && webpack -p",
     "build-html": "cp src/index.html public/",
+    "build-css": "cp src/main.css public/",
     "clean-all": "rm -rf public && mkdir public",
+    "dev": "npm run clean-all && npm run build-html && npm run build-css && webpack-dev-server",
     "start": "npm run clean-all && npm run build && http-server",
     "test": "standard"
   },
@@ -14,7 +16,12 @@
   "license": "ISC",
   "devDependencies": {
     "standard": "^8.6.0",
-    "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "canvg": "0.0.8",
+    "http-server": "^0.9.0",
+    "konva": "^1.4.0",
+    "webpack": "^2.2.1"
   }
 }
