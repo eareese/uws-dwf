@@ -3,6 +3,7 @@ const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/
 
 function Seal(image, els) {
   let s = Snap('#ky_home').add(image)
+  let sealEl = s.select('#seal')
   let topText = s.select('#motto_top')
   let btmText = s.select('#motto_btm')
 
@@ -10,8 +11,8 @@ function Seal(image, els) {
     topText.attr({ '#text': els.input.top.value })
     btmText.attr({ '#text': els.input.btm.value })
 
-    els.link.download = "fancy-generated-name.svg"
-    els.link.href = s.toDataURL()
+    els.link.download = "fancy-different-generated-name.svg"
+    els.link.href = sealEl.toDataURL()
   }
   return {
     seal: s,
