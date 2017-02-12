@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public')
   },
   devServer: {
-    contentBase: 'public/'
+    contentBase: 'src/'
   },
   module: {
     loaders: [
