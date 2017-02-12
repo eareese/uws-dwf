@@ -1,12 +1,15 @@
 let path = require('path')
 
 module.exports = {
-  entry: './app/app.js',
+  entry: './src/app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
   },
   devServer: {
-    contentBase: 'dist-dev/'
-  }
+    contentBase: 'public/'
+  },
+  node: {
+    fs: 'empty'
+  },
 }
