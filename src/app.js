@@ -1,33 +1,39 @@
 const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
 
 
+function Seal(image, els) {
+  let s = Snap('#ky_home').add(image)
+  let topText = s.select('#motto_top')
+  let btmText = s.select('#motto_btm')
 
-function changeMottos(s, mottos) {
-  let tm = s.select('#motto_top')
-  tm.attr({ '#text': mottos.top })
-  let bm = s.select('#motto_btm')
-  bm.attr({ '#text': mottos.btm })
-}
+  function update() {
+    topText.attr({ '#text': els.input.top.value })
+    btmText.attr({ '#text': els.input.btm.value })
 
-function continueDrawing(s) {
-  let topInput = document.getElementById("text_top");
-  let btmInput = document.getElementById("text_btm");
-  topInput.addEventListener('input', function() {
-    changeMottos(s, {top: topInput.value, btm: btmInput.value})
-  })
-  btmInput.addEventListener('input', function() {
-    changeMottos(s, {top: topInput.value, btm: btmInput.value})
-  })
-  changeMottos(s, {top: topInput.value, btm: btmInput.value})
-}
-
-function drawSeal() {
-  Snap.load('seal.svg', function(data) {
-    let s = Snap('#ky_home')
-    continueDrawing(s.add(data))
-  })
+    els.link.download = "fancy-generated-name.svg"
+    els.link.href = s.toDataURL()
+  }
+  return {
+    seal: s,
+    wireUp: function() {
+      update()
+      els.input.top.addEventListener('input', update)
+      els.input.btm.addEventListener('input', update)
+    }
+  }
 }
 
 window.addEventListener('load', function() {
-  drawSeal()
+  let elements = {
+    link: document.getElementById('get_img'),
+    input: {
+      top: document.getElementById('text_top'),
+      btm: document.getElementById('text_btm')
+    }
+  }
+
+  Snap.load('seal.svg', function(data) {
+    let sl = Seal(data, elements)
+    sl.wireUp()
+  })
 })
