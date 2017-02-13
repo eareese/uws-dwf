@@ -7,26 +7,23 @@
   </head>
 
   <body>
+
     <div class="container">
 
-      <div class="row">
-        <svg id="ky_home" viewBox="0 0 662 662" preserveAspectRatio="xMinYMin meet"></svg>
+      <div class="row" id="row_svg">
+        <svg id="ky_home" width="100%" height="100%" viewBox="0 0 662 662" preserveAspectRatio="xMinYMin meet"></svg>
       </div>
 
       <div class="row" id="row_inputs">
-        <input id="text_top" type="text" value=""/>
-        <input id="text_btm" type="text" value=""/>
+        <input class="u-full-width" id="text_top" type="text" value=""/>
+        <input class="u-full-width" id="text_btm" type="text" value=""/>
+        <a id="get_img" class="button button-primary" href="#">Get image</a>
       </div>
 
-      <div class="row">
-        <a id="get_img" href="#seal2img">Get image</a>
-      </div>
-
-      <div class="row">
-        <img id="seal2img"/>
-      </div>
-
+      <img id="seal2img"/>
     </div>
+
+
    <script type="text/javascript" src="bundle.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+require('normalize.css')
+require('./lib/skeleton-custom.css')
 require('./main.css')
 
 const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`)
@@ -26,7 +28,8 @@ function Seal (image, els) {
   }
   function toImage (data) {
     els.img.onload = function() {
-      let yOffset = offset(els.link).top
+      els.img.style.display = 'block';
+      let yOffset = offset(els.img).top
       window.scrollTo(0, yOffset)
     }
     els.img.src = data

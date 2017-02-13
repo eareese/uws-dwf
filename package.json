@@ -4,11 +4,10 @@
   "description": "uws dwf",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-html && npm run build-css && webpack -p",
+    "build": "npm run build-html && webpack -p",
     "build-html": "cp src/index.html public/",
-    "build-css": "cp src/main.css public/",
     "clean-all": "rm -rf public && mkdir public",
-    "dev": "npm run clean-all && npm run build-html && npm run build-css && webpack-dev-server",
+    "dev": "webpack-dev-server",
     "start": "http-server",
     "test": "standard"
   },
@@ -24,6 +23,7 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "imports-loader": "^0.7.0",
+    "normalize.css": "^5.0.0",
     "standard": "^8.6.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
