@@ -1,6 +1,6 @@
 {
   "name": "uws-dwf",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "uws dwf",
   "main": "index.js",
   "scripts": {

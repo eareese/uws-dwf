@@ -11,7 +11,7 @@ module.exports = {
     contentBase: 'src/'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
@@ -19,9 +19,7 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
-      }
-    ],
-    rules: [
+      },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
