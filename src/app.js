@@ -1,5 +1,8 @@
-import './lib/svg_todataurl.js'
+require('./main.css')
+
 const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`)
+
+import './lib/svg_todataurl.js'
 
 function offset(el) {
   /* Calculates the X/Y coordinates of an element relative to the document.
