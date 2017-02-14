@@ -13,6 +13,7 @@
   },
   "author": "Emily Reese <emilyreese@fastmail.com>",
   "license": "ISC",
+  "repository": "eareese/uws-dwf",
   "engines": {
     "node": "5.9.1"
   },
