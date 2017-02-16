@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build-static && webpack -p",
-    "build-static": "cp src/index.html public/ && cp src/seal.svg public/",
-    "clean-all": "rm -rf public && mkdir public",
+    "build-static": "cp src/index.html docs/ && cp src/seal.svg docs/",
+    "clean-all": "rm -rf docs && mkdir docs",
     "dev": "webpack-dev-server",
-    "start": "npm run build && http-server public",
+    "start": "npm run build && http-server docs",
     "test": "standard src/app.js"
   },
   "author": "Emily Reese <emilyreese@fastmail.com>",

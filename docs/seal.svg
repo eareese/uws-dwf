@@ -2977,10 +2977,10 @@
 		c0.5,3.498,0.5,3.498,0.5,3.498L579,259.305z"/>
 </g>
 <g id="mottos">
-  <text style="stroke: navy; fill: navy; font-family: Helvetica; font-size: 1.3em;" text-anchor="middle">
+  <text text-anchor="middle" style="stroke: navy; fill: navy; font-family: Helvetica; font-size: 1.3em; text-transform: uppercase;">
     <textPath id="motto_top" xlink:href="#p1" startOffset="50%" />
   </text>
-  <text style="stroke: navy; fill: navy; font-family: Helvetica; font-size: 1.3em;" text-anchor="middle">
+  <text text-anchor="middle" style="stroke: navy; fill: navy; font-family: Helvetica; font-size: 1.3em; text-transform: uppercase;">
     <textPath id="motto_btm" xlink:href="#p2" startOffset="50%" />
   </text>
 </g>
