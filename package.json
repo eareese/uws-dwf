@@ -4,12 +4,12 @@
   "description": "uws dwf",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-html && webpack -p",
-    "build-html": "cp src/index.html public/",
+    "build": "npm run build-static && webpack -p",
+    "build-static": "cp src/index.html public/ && cp src/seal.svg public/",
     "clean-all": "rm -rf public && mkdir public",
     "dev": "webpack-dev-server",
-    "start": "http-server",
-    "test": "standard"
+    "start": "npm run build && http-server public",
+    "test": "standard src/app.js"
   },
   "author": "Emily Reese <emilyreese@fastmail.com>",
   "license": "ISC",
