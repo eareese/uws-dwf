@@ -1,4 +1,4 @@
-# uws-dwf :two_men_holding_hands:
+# UWS :two_men_holding_hands: DWF
 
 ### Kentucky Seal generator app
 
