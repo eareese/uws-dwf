@@ -1,11 +1,13 @@
 # uws-dwf :two_men_holding_hands:
 
-TODO: write description
-
 ## Usage
 
-Write yer own mottos, save the resulting image
+This app renders a [Seal of the Commonwealth of Kentucky](www.sos.ky.gov/secdesk/history/Pages/Seals.aspx) in SVG. The motto can be updated, and the generated Seal can be saved in PNG format.
 
-## Implementation
 
-Works on Safari and mobile Safari. Seems broken on Firefox due to native implementation of image/PNG conversion. Chrome and chromealikes appear to work fine, but sometimes the output image is too small.
+## Stuff that helped
+
+* [Wikimedia Commons: Seal of Kentucky SVG](http://commons.wikimedia.org/wiki/File:Seal_of_Kentucky.svg)
+* [SVG: Text on a path](http://svgwg.org/svg2-draft/text.html#TextLayoutPath)
+* [Snap.svg](http://snapsvg.io)
+* [SVG.toDataURL](https://github.com/sampumon/SVG.toDataURL)
