@@ -2,7 +2,7 @@
 
 ## Usage
 
-This app renders a [Seal of the Commonwealth of Kentucky](www.sos.ky.gov/secdesk/history/Pages/Seals.aspx) in SVG. The motto can be updated, and the generated Seal can be saved in PNG format.
+This app renders a [Seal of the Commonwealth of Kentucky](http://www.sos.ky.gov/secdesk/history/Pages/Seals.aspx) in SVG. The motto can be updated, and the generated Seal can be saved in PNG format.
 
 
 ## Stuff that helped
