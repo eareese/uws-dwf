@@ -1,15 +1,14 @@
 let path = require('path'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    HtmlWebpackPlugin = require('html-webpack-plugin')
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  entry: './src/app.js',
+  context: path.resolve(__dirname, "src"),
+  entry: './app.js',
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'docs')
-  },
-  devServer: {
-    contentBase: 'src/'
+    path: path.resolve(__dirname, 'docs'),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -33,11 +32,22 @@ module.exports = {
   node: {
     fs: 'empty'
   },
+  devServer: {
+    contentBase: 'src/'
+  },
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       title: 'Kentucky Seal Generator',
       template: '!!pug-loader!src/index.pug'
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'seal.svg', to: '[name].[ext]' },
+      {
+        from: '*.png',
+        to: 'img/[name].[ext]',
+      },
+      { from: 'manifest.json' }
+    ])
   ]
 }
