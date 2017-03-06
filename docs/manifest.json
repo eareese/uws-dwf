@@ -4,9 +4,23 @@
   "start_url": "/",
   "theme_color": "#232364",
   "background_color": "#4f4fb0",
+  "orientation": "portrait",
+  "display": "browser",
   "icons": [{
-    "src": "icon_144.png",
+    "src": "img/icon-128x128.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  },{
+    "src": "img/ms-touch-icon-144x144-precomposed.png",
     "type": "image/png",
     "sizes": "144x144"
+  },{
+    "src": "img/apple-touch-icon.png",
+    "type": "image/png",
+    "sizes": "152x152"
+  },{
+    "src": "img/chrome-touch-icon-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
   }]
 }

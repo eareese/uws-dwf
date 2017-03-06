@@ -44,7 +44,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'seal.svg', to: '[name].[ext]' },
       {
-        from: '*.png',
+        from: 'img/*.png',
         to: 'img/[name].[ext]',
       },
       { from: 'manifest.json' }
